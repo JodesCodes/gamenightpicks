@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "gamenightpicks"
+  "defaultProject": "gamenightpicks",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "sass"
+    }
+  }
 }
