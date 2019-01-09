@@ -1,10 +1,9 @@
-<h1>Start a Table</h1>
-<form id="tableName">
-  <input type="text" name="table" placeholder="Enter game name">
-  <button class="submit" (click)="tablemakerService.createTable(table)">Create Table</button>
-</form>
-
-<div class="tables">
-  <h2>Currently Available Tables</h2>
-  <ul id="tables"></ul>
+<div>
+  <label>Enter game title to start a table: </label>
+    <input #table />
+</div>
+<div>
+  <button (click)="createTable(table.value); table.value=''">
+    Start table
+    </button>
 </div>

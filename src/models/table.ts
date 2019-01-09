@@ -1,6 +1,7 @@
 export class Table {
     title: string;
     maxPlayers: number;
-    playTime: TimeRanges;
+    playTimeMin: number;
+    playTimeMax: number;
     keywords: string[];
 }
