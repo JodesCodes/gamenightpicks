@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Start a New Table</h1>
+<div mat-dialog-content>
+    Please fill out the table description:
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Game Title: </mat-label>
+            <input matInput placeholder="Enter name of the game you want to play.">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Max Number of Players: </mat-label>
+            <input matInput placeholder="How many people can play?">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Keywords: </mat-label>
+            <input matInput placeholder="Ex: Worker placement, fantasy, co-op.">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="30" min="0" max="500">Play Time</mat-slider>
+    </p>
+</div>
+<button mat-button mat-dialog-close>Cancel</button>
