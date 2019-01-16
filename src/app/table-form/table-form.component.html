@@ -1,28 +1,27 @@
-<div class="container">
-    <h1>New Table</h1>
-    <h2>Please enter the table details:</h2>
-    <form>
-        <div class="form-group">
-            <label for="gameTitle">Game Title: </label>
-            <input type="text" class="form-control" id="gameTitle" required>
-        </div>
+<div class="table">
+<mat-card>
+<mat-card-title>New Table</mat-card-title>
+<mat-card-subtitle>Please enter the table details:</mat-card-subtitle>
 
-        <div class="form-group">
-            <label for="maxPlayers">Max No. of Players: </label>
-            <input type="number" class="form-control" id="maxPlayers" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="keywords">Keywords: </label>
-            <input type="text" class="form-control" id="keywords">
-        </div>
+        <mat-form-field class="full-width">
+        <input matInput placeholder="Game Title">
+        </mat-form-field>
 
-        <div class="form-group">
-            <label for="playTime">Avg. Playtime (mins): </label>
-            <input type="number" class="form-control" id="playTime" required>
-        </div>
+        <mat-form-field class="full-width">
+        <input matInput placeholder="Number of Players"> 
+        </mat-form-field>
 
-        <button type="submit" class="btn btn-success">Create Table</button>
-        <button type="button" class="btn button">Cancel</button>
-    </form>
+        <mat-form-field class="full-width">
+        <input matInput placeholder="Keywords"> 
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-select placeholder="Avg. Play Time">
+                <mat-option *ngFor="let playTime of playTimes" [value]="playTime.time">{{playTime.time}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+<button mat-raised-button type="submit" color="primary">Create Table</button>
+<button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+</mat-card>
 </div>

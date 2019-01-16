@@ -6,7 +6,7 @@ import { TableFormComponent } from '../table-form/table-form.component';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.sass']
+  styleUrls: ['./table.component.scss']
 })
 
 export class TableComponent {
@@ -27,8 +27,10 @@ export class TableComponent {
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
+    dialogConfig.height = '500px';
+    dialogConfig.width = '400px';
 
     this.dialog.open(TableFormComponent, dialogConfig);
   }
