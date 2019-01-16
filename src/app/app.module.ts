@@ -1,23 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { StartPageComponent } from './startpage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
+import { TableFormComponent } from './table-form/table-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartPageComponent,
     TableComponent,
+    TableFormComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 
 export class AppModule { }

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
+import { Component, Inject } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Table } from '../models/table';
+import { TableFormComponent } from '../table-form/table-form.component';
 
 @Component({
   selector: 'app-table',
@@ -10,7 +11,7 @@ import { Table } from '../models/table';
 
 export class TableComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) {}
 
   createTable(tableToCreate: Table): Table {
     // Ask about const here.
@@ -25,18 +26,10 @@ export class TableComponent {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(TableFormComponent, {});
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(TableFormComponent, dialogConfig);
   }
 }
-
-@Component({
-  selector: 'app-table-form',
-  templateUrl: 'template-form.html'
-})
-
-export class TableFormComponent {}
-
