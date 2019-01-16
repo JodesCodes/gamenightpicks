@@ -29,7 +29,7 @@ export class TableComponent {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
-    dialogConfig.height = '500px';
+    dialogConfig.height = 'auto';
     dialogConfig.width = '400px';
 
     this.dialog.open(TableFormComponent, dialogConfig);
