@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { hammerjs } from 'hammerjs';
 
 @Component({
   selector: 'app-table-form',
@@ -6,4 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-form.component.sass']
 })
 export class TableFormComponent {
+
+  formatLabel(playTime: number | null) {
+    if (!playTime) {
+      return 0;
+    }
+      return playTime + 'minutes';
+  }
 }

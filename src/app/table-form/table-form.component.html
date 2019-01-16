@@ -1,26 +1,28 @@
-<h1 mat-dialog-title>Start a New Table</h1>
-<div mat-dialog-content>
-    Please fill out the table description:
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>Game Title: </mat-label>
-            <input matInput placeholder="Enter name of the game you want to play.">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>Max Number of Players: </mat-label>
-            <input matInput placeholder="How many people can play?">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>Keywords: </mat-label>
-            <input matInput placeholder="Ex: Worker placement, fantasy, co-op.">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="30" min="0" max="500">Play Time</mat-slider>
-    </p>
+<div class="container">
+    <h1>New Table</h1>
+    <h2>Please enter the table details:</h2>
+    <form>
+        <div class="form-group">
+            <label for="gameTitle">Game Title: </label>
+            <input type="text" class="form-control" id="gameTitle" required>
+        </div>
+
+        <div class="form-group">
+            <label for="maxPlayers">Max No. of Players: </label>
+            <input type="number" class="form-control" id="maxPlayers" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="keywords">Keywords: </label>
+            <input type="text" class="form-control" id="keywords">
+        </div>
+
+        <div class="form-group">
+            <label for="playTime">Avg. Playtime (mins): </label>
+            <input type="number" class="form-control" id="playTime" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Create Table</button>
+        <button type="button" class="btn button">Cancel</button>
+    </form>
 </div>
-<button mat-button mat-dialog-close>Cancel</button>
