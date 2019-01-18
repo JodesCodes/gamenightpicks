@@ -1,8 +1,11 @@
-h1 {
-    text-align: center;
-    font: Helvetica;
+.banner {
+    width: 100%;
+    max-width: 900px;
+    margin: 2.5em auto;
+    border-radius: .35em;
+    overflow: hidden;
+    box-shadow: 0 0 26px rgba(0,0,0,.13);
 }
-p {
-    text-align: center;
-    font: Helvetica;
+.background {
+    background-color: lightgray;
 }

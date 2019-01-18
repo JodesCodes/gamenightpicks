@@ -1,10 +1,15 @@
-<div>
-    <header>
-        <mat-card>
-            <h1>{{title}}</h1>
-            <p>{{descriptionPart1}}</p>
-            <p>{{descriptionPart2}}</p>
-            <app-table></app-table>
+<div class="wrapper">
+    <mat-card class="background">
+        <mat-card class="banner">
+            <img mat-card-image src="../assets/images/banner3.png">
+                <mat-card-content>
+                    <app-table></app-table>
+                </mat-card-content>
         </mat-card>
-    </header>
+    </mat-card>
+
+    <div class="listOfTables">
+        <h2>Currently available tables.</h2>
+        <ul id="tables"></ul>
+    </div>
 </div>

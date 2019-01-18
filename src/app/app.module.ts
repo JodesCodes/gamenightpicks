@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MatCardModule, MatButtonModule, MatSelectModule, MatDialogModule, MatCheckboxModule, MatInputModule } from '@angular/material';
+import { MatCardModule, MatSelectModule, MatDialogModule, MatCheckboxModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatIconModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { TableFormComponent } from './table-form/table-form.component';
     MatCardModule,
     MatSelectModule,
     MatInputModule,
+    MatIconModule
   ],
   entryComponents: [ TableFormComponent ],
   providers: [],

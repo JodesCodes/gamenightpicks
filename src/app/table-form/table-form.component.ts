@@ -20,10 +20,4 @@ export class TableFormComponent {
     {time: '3 hours'},
     {time: '3+ hours'}];
 
-  formatLabel(playTime: number | null) {
-    if (!playTime) {
-      return 0;
-    }
-      return playTime + 'minutes';
-  }
 }
