@@ -1,7 +1,7 @@
 <div class="wrapper">
     <mat-card class="background">
         <mat-card class="banner">
-            <img mat-card-image src="../assets/images/banner3.png">
+            <img mat-card-image src="../assets/images/rootgamenightdark.png">
                 <mat-card-content>
                     <app-table></app-table>
                 </mat-card-content>
@@ -9,7 +9,24 @@
     </mat-card>
 
     <div class="listOfTables">
-        <h2>Currently available tables.</h2>
-        <ul id="tables"></ul>
-    </div>
+        <mat-card>
+        <mat-card-title class="available-tables">Currently available tables.</mat-card-title>
+            <ul id="tables">
+                <mat-card class="game-table">
+                    <mat-card-header>
+                        <mat-card-title>A Feast for Odin</mat-card-title>
+                    </mat-card-header>
+                        <img mat-card-image src="../assets/images/feastforodin.png">
+                    <mat-card-content>
+                        <p>Maximum Players: 4</p>
+                        <p>Average Playtime: 2 1/2 hours</p>
+                        <p>Mechanisms:</p>
+                        <p>Worker placement, Tile Placement, Press Your Luck</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button color="accent" mat-raised-button>Join</button>
+                    </mat-card-actions>
+                </mat-card>
+            </ul>
+    </div>  
 </div>

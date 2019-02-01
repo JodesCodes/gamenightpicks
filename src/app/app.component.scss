@@ -1,3 +1,6 @@
+.background {
+    background-color: lightgray;
+}
 .banner {
     width: 100%;
     max-width: 900px;
@@ -6,6 +9,13 @@
     overflow: hidden;
     box-shadow: 0 0 26px rgba(0,0,0,.13);
 }
-.background {
-    background-color: lightgray;
+.available-tables {
+    text-align: center;
+}
+.game-table {
+    width: 300px;
+}
+.mat-card-image {
+    display: block;
+    height: auto;
 }

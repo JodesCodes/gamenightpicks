@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
 import { TableFormComponent } from './table-form/table-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TableFormComponent } from './table-form/table-form.component';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatDialogModule,
     MatButtonModule,
     MatCheckboxModule,

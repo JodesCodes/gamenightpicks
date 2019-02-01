@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Table } from '../models/table';
 
 export interface PlayTimes {
   time: string;
@@ -20,4 +21,21 @@ export class TableFormComponent {
     {time: '3 hours'},
     {time: '3+ hours'}];
 
+  newTable: Table;
+
+  constructor() {
+    this.newTable = new Table();
+  }
+
+  addTable() {
+    this.buildTable(this.newTable);
+    console.log(this.newTable);
+  }
+
+  buildTable(table: Table) {
+    const tableList = document.getElementById('tables');
+    const li = document.createElement('li');
+    li.textContent = this.newTable.title;
+    tableList.appendChild(li);
+  }
 }

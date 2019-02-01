@@ -1,6 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
-import { Table } from '../models/table';
 import { TableFormComponent } from '../table-form/table-form.component';
 
 @Component({
@@ -11,21 +10,10 @@ import { TableFormComponent } from '../table-form/table-form.component';
 
 export class TableComponent {
 
-  constructor(private dialog: MatDialog) {}
-
-  createTable(tableToCreate: Table): Table {
-    // Ask about const here.
-    const newTable = new Table();
-    newTable.title = tableToCreate.title;
-    newTable.keywords = tableToCreate.keywords;
-    newTable.maxPlayers = tableToCreate.maxPlayers;
-    newTable.playTimeMin = tableToCreate.playTimeMin;
-    newTable.playTimeMax = tableToCreate.playTimeMax;
-
-    return newTable;
+  constructor(private dialog: MatDialog) {
   }
 
-  openDialog() {
+  openDialog(): void {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
@@ -35,3 +23,4 @@ export class TableComponent {
     this.dialog.open(TableFormComponent, dialogConfig);
   }
 }
+
