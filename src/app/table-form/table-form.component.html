@@ -2,7 +2,7 @@
     <div class="table">
         <mat-card>
             <mat-form-field class="full-width">
-                <input matInput type="sring" placeholder="Game Title" [(ngModel)]="newTable.title">
+                <input matInput type="string" placeholder="Game Title" [(ngModel)]="newTable.title">
             </mat-form-field>
 
             <mat-form-field class="full-width">
@@ -17,6 +17,10 @@
                 <mat-select placeholder="Avg. Play Time" [(ngModel)]="newTable.playTime">
                 <mat-option *ngFor="let playTime of playTimes" [value]="playTime.time">{{playTime.time}}</mat-option>
             </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <input matInput type="string" placeholder="Player Name" [(ngModel)]="newTable.playerName">
             </mat-form-field>
 
             <button mat-raised-button [mat-dialog-close]="true" type="submit" color="primary" (click)="addTable()"><mat-icon>people</mat-icon>Start Table</button>

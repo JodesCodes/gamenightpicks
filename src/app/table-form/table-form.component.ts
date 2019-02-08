@@ -14,12 +14,12 @@ export interface PlayTimes {
 export class TableFormComponent {
   playTimes: PlayTimes[] = [
     {time: '30 minutes'},
-    {time: '1 hour'},
-    {time: '1 1/2 hours'},
-    {time: '2 hours'},
-    {time: '2 1/2 hours'},
-    {time: '3 hours'},
-    {time: '3+ hours'}];
+    {time: '60 minutes'},
+    {time: '90 minutes'},
+    {time: '120 minutes'},
+    {time: '150 minutes'},
+    {time: '180 minutes'},
+    {time: '180+ minutes'}];
 
   newTable: Table;
 

@@ -1,6 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatCardModule, MatSelectModule, MatDialogModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { MatButtonModule, MatIconModule } from '@angular/material';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -24,6 +26,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
+    MatDividerModule,
+    MatGridListModule,
     MatSelectModule,
     MatInputModule,
     MatIconModule

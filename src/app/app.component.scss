@@ -1,6 +1,3 @@
-.background {
-    background-color: lightgray;
-}
 .banner {
     width: 100%;
     max-width: 900px;
@@ -9,13 +6,18 @@
     overflow: hidden;
     box-shadow: 0 0 26px rgba(0,0,0,.13);
 }
-.available-tables {
-    text-align: center;
+.button-leave {
+    float: right;
+    padding: 1px;
 }
 .game-table {
     width: 300px;
 }
-.mat-card-image {
-    display: block;
-    height: auto;
+.table-attribute {
+    margin: 1em;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    border: 2px;
+    border-color: lightskyblue;
 }

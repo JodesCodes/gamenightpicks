@@ -3,4 +3,5 @@ export class Table {
     maxPlayers: number;
     keywords: string[];
     playTime: string;
+    playerName: string;
 }
