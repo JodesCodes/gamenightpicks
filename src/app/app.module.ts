@@ -2,18 +2,22 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatCardModule, MatSelectModule, MatDialogModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { TableFormComponent } from './table-form/table-form.component';
-import { FormsModule } from '@angular/forms';
+import { DisplayedTablesPipe } from './displayed-tables.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DisplayedTablesPipe,
     TableComponent,
     TableFormComponent,
   ],
@@ -30,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   entryComponents: [ TableFormComponent ],
   providers: [],

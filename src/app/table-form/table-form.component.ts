@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { Table } from '../models/table';
 
 export interface PlayTimes {
@@ -35,7 +36,7 @@ export class TableFormComponent {
   buildTable(table: Table) {
     const tableList = document.getElementById('tables');
     const li = document.createElement('li');
-    li.textContent = this.newTable.title;
+    li.textContent = this.newTable.Title;
     tableList.appendChild(li);
   }
 }

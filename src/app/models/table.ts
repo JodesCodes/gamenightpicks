@@ -1,7 +1,12 @@
+import { TableStatus } from "./TableStatus";
+
 export class Table {
-    title: string;
-    maxPlayers: number;
-    keywords: string[];
-    playTime: string;
-    playerName: string;
+    public Title: string;
+    public CurrentPlayers: number;
+    public MaxPlayers: number;
+    public Keywords: string[];
+    public PlayTime: string;
+    public PlayerName: string[];
+    public Displayed: boolean = true;
+    public Status: TableStatus;
 }

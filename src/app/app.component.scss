@@ -10,14 +10,12 @@
     float: right;
     padding: 1px;
 }
-.game-table {
-    width: 300px;
-}
-.table-attribute {
-    margin: 1em;
-    width: 100%;
+
+.table {
     display: flex;
-    align-items: flex-start;
-    border: 2px;
-    border-color: lightskyblue;
+    width: 100%;
+}
+
+.th.mat-sort-header-sorted {
+    color: black;
 }

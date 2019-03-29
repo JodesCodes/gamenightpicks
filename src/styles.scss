@@ -13,3 +13,6 @@ $my-theme: mat-dark-theme(
 );
 
 @include angular-material-theme($my-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }

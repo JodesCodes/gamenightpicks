@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
+
 import { TableFormComponent } from '../table-form/table-form.component';
 
 @Component({
