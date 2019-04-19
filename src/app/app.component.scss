@@ -1,3 +1,8 @@
+h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .banner {
     width: 100%;
     max-width: 900px;
@@ -5,17 +10,4 @@
     border-radius: .35em;
     overflow: hidden;
     box-shadow: 0 0 26px rgba(0,0,0,.13);
-}
-.button-leave {
-    float: right;
-    padding: 1px;
-}
-
-.table {
-    display: flex;
-    width: 100%;
-}
-
-.th.mat-sort-header-sorted {
-    color: black;
 }

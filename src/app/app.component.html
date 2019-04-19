@@ -1,66 +1,10 @@
-<mat-card class="banner">
-    <img mat-card-image src="../assets/images/rootgamenightdark.png">
-        <mat-card-content>
-            <app-table></app-table>
-        </mat-card-content>
-</mat-card>
-<mat-card class="table">
-    <mat-card-content>
-        <div class="table">
-            <div class="row table-status-container">
-                <div class="table-status">
-                    <button class="button sm" (click)="filter(TableStatus.Full)" full-button>Full</button>
-                    <button class="button sm" (click)="filter(TableStatus.Open)" open-button>Open</button>
-                </div>
-            </div>
-            <table mat-table [dataSource]="dataSource" matSort class="table-list">
-                <ng-container matColumnDef="Title">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Game</th>
-                    <td mat-cell *matCellDef="let table">{{table.Title}}</td>
-                </ng-container>
-                <ng-container matColumnDef="CurrentPlayers">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Players</th>
-                    <td mat-cell *matCellDef="let table">{{table.CurrentPlayers}}</td>
-                </ng-container>
-                <ng-container matColumnDef="MaxPlayers">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Max Players</th>
-                    <td mat-cell *matCellDef="let table">{{table.MaxPlayers}}</td>
-                </ng-container>
-                <ng-container matColumnDef="AveragePlaytime">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Avg. Playtime</th>
-                    <td mat-cell *matCellDef="let table">{{table.AveragePlaytime}}</td>
-                </ng-container>
-                <ng-container matColumnDef="Status">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
-                    <td mat-cell *matCellDef="let table">{{table.Status}}</td>
-                </ng-container>
-
-                <tr mat-header-row *matHeaderRowDef="displayedTestTables"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedTestTables;"></tr>
-            </table>
-
-            <!-- <table mat-table matSort class="table-list" (matSortChange)="sortTable($event)">
-                <th mat-sort-header="Game">Game</th>
-                <th mat-sort-header="CurrentPlayers">Current Players</th>
-                <th mat-sort-header="MaxPlayers">Max Players</th>
-                <th mat-sort-header="AveragePlaytime">Avg. Playtime</th>
-                <th mat-sort-header="TableStatus">Status</th>
-                <tr *ngFor="let table of (tables | displayedTables)">
-                    <td game-title>{{ table.Title }}</td>
-                    <td current-players>{{ table.CurrentPlayers</td>
-                    <td max-players>{{ table.MaxPlayers }}</td>
-                    <td table-playtime>{{ table.PlayTime }}</td>
-                    <td table-status>{{ table.Status }}</td>
-                <tr *ngIf="tables != undefined && !areAnyFiltersSelected()">
-                    <td colspan="5" class="text-center">At Least One Filter Must Be Specified</td>
-                </tr>
-                <tr *ngIf="tables != undefined && tables.length == 0 || (tables != undefined && (tables | displayedTables).length == 0) && areAnyFiltersSelected()">
-                    <td colspan="5" class="text-center">There Are No Tables Matching The Specified Criteria</td>
-                </tr>
-                <tr *ngIf="tables == undefined">
-                    <td colspan="5" class="text-center">Please Specify Search Criteria</td>
-                </tr>
-        </table> -->
-        </div>
-    </mat-card-content>
-</mat-card>
+<div class="row">
+    <div class="col-md-12">
+        <mat-card class="banner">
+            <img mat-card-image src="../assets/images/rootgamenightdark.png">
+            <mat-card-content>
+                <app-homepage></app-homepage>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

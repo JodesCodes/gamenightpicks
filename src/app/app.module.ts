@@ -10,16 +10,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TableComponent } from './table/table.component';
-import { TableFormComponent } from './table-form/table-form.component';
-import { DisplayedTablesPipe } from './displayed-tables.pipe';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayedTablesPipe,
-    TableComponent,
-    TableFormComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,10 +33,9 @@ import { DisplayedTablesPipe } from './displayed-tables.pipe';
     MatIconModule,
     MatTableModule
   ],
-  entryComponents: [ TableFormComponent ],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-
 export class AppModule { }
