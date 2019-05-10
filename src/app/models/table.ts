@@ -1,5 +1,6 @@
-import { TableStatus } from "./TableStatus";
-import { Player } from "./Player";
+import { TableStatus } from "./tablestatus";
+import { Player } from "./player";
+
 
 export class Table {
     public Title: string;

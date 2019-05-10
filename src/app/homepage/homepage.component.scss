@@ -10,3 +10,14 @@ div {
     }
 }
 
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+mat-header-cell {
+    text-align: center;
+}

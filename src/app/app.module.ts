@@ -11,11 +11,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { PlayerFirstnamePipe } from './pipes/player-firstname.pipe';
+import { TablesComponent } from './tables/tables.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    PlayerFirstnamePipe,
+    TablesComponent,
   ],
   imports: [
     BrowserModule,
