@@ -1,7 +1,5 @@
-import { AbstractFormGroupDirective } from "@angular/forms";
-
 export class Player {
-    public PlayerId: Guid,
+    public UserName: string;
     public FirstName: string;
     public LastName: string;
     public BggUserName?: string;
