@@ -1,4 +1,4 @@
 export enum TableStatus {
-    Full = "Full",
-    Open = "Open"
+    Full = 'Full',
+    Open = 'Open'
 }

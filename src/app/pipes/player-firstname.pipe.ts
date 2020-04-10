@@ -7,12 +7,12 @@ import { Player } from '../models/Player';
 export class PlayerFirstnamePipe implements PipeTransform {
 
   transform(players: Player[]): string{
-    var playersList = [];
+    const playersList = [];
     players.forEach(player => {
       playersList.push(player.FirstName); 
     });
 
-   var commaSeparatedList = playersList.join(', ');
+   const commaSeparatedList = playersList.join(', ');
 
     return commaSeparatedList;
   }

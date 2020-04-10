@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -35,7 +36,10 @@ import { TablesComponent } from './tables/tables.component';
     MatSelectModule,
     MatInputModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    RouterModule.forRoot([
+      { path: '', component: TablesComponent },
+    ])
   ],
   entryComponents: [],
   providers: [],
