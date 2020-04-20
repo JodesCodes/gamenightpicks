@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import {Table } from '../models/table';
+import { Table } from '../models/Table';
 import { TableStatus } from '../models/TableStatus';
 
  const tablesData: Table[] = [
@@ -24,6 +23,7 @@ import { TableStatus } from '../models/TableStatus';
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.scss']
 })
+
 export class TablesComponent {
   tables: Table[];
 
@@ -32,4 +32,20 @@ export class TablesComponent {
    }
 
   displayedColumns: string[] = ['Title', 'MaxPlayers', 'PlayTime', 'Players', 'Status'];
+
+  showPlayers(event) {
+    const className = 'collapsible-panel--expanded';
+    if (event.target.classList.contains(className)) {
+        event.target.classList.remove(className);
+    } else {
+        event.target.classList.add(className);
+    }
+  }
+
+  determineTableStatus(table: Table) {
+    table.Status = TableStatus.Open;
+    if (table.MaxPlayers === table.Players.length) {
+      table.Status = TableStatus.Full;
+    }
+  }
 }

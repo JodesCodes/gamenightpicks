@@ -1,4 +1,13 @@
 <h2>Tables</h2>
-<div *ngFor="let table of tables">
-  <h3>{{ table.Title }} <a class="button fancy-button"><i class="material-icons">group_add</i>Sit</a></h3>
+<div>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let table of tables" hideToggle="true" #tables>
+      <mat-expansion-panel-header>
+        {{ table.Title }} ({{ table.Status }})
+      </mat-expansion-panel-header>
+      <mat-expansion-content *ngFor="let player of table.Players">
+        {{ player.FirstName }}
+      </mat-expansion-content>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
