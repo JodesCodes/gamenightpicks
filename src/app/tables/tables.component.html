@@ -1,13 +1,17 @@
 <h2>Tables</h2>
-<div>
+<mat-card>
   <mat-accordion>
     <mat-expansion-panel *ngFor="let table of tables" hideToggle="true" #tables>
       <mat-expansion-panel-header>
         {{ table.Title }} ({{ table.Status }})
       </mat-expansion-panel-header>
-      <mat-expansion-content *ngFor="let player of table.Players">
-        {{ player.FirstName }}
-      </mat-expansion-content>
+      <div *ngFor="let player of table.Players">
+        <p>
+          {{ player.FirstName }}
+        </p>
+      </div>
+      <button *ngIf="table.Status === 'Open'" (click)="AddPlayer(table, currentPlayer)">Sit Down</button>
+      <button *ngIf="table.Players.includes(activePlayer)" (click)="RemovePlayer(table, currentPlayer)">Leave</button>
     </mat-expansion-panel>
   </mat-accordion>
-</div>
+</mat-card>

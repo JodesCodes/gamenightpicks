@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Table } from '../models/Table';
+import { Player } from '../models/Player';
 import { TableStatus } from '../models/TableStatus';
 
  const tablesData: Table[] = [
@@ -18,34 +19,35 @@ import { TableStatus } from '../models/TableStatus';
       {UserName: 'MaturinYDomonova', FirstName: 'Brett', LastName: 'Gilbert', BggUserName: ''}]}
 ];
 
+const newPlayer: Player = {
+  FirstName: 'New',
+  LastName: 'Player',
+  UserName: 'NewPlayer1980',
+  BggUserName: 'nueplayer'
+};
+
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.scss']
 })
 
-export class TablesComponent {
+export class TablesComponent implements OnInit {
   tables: Table[];
+  activePlayer: Player;
 
-  constructor() {
+  ngOnInit() {
+    this.activePlayer = newPlayer;
     this.tables = tablesData;
-   }
-
-  displayedColumns: string[] = ['Title', 'MaxPlayers', 'PlayTime', 'Players', 'Status'];
-
-  showPlayers(event) {
-    const className = 'collapsible-panel--expanded';
-    if (event.target.classList.contains(className)) {
-        event.target.classList.remove(className);
-    } else {
-        event.target.classList.add(className);
-    }
   }
 
-  determineTableStatus(table: Table) {
-    table.Status = TableStatus.Open;
-    if (table.MaxPlayers === table.Players.length) {
-      table.Status = TableStatus.Full;
-    }
+  AddPlayer(table: Table, player: Player) {
+    player = newPlayer;
+    table.Players.push(player);
+  }
+
+  RemovePlayer(table: Table, player: Player) {
+    player = newPlayer;
+    table.Players.splice(table.Players.indexOf(player), 1);
   }
 }
